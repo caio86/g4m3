@@ -8,4 +8,4 @@ run: build
   ./output <input.txt | tee output.txt
 
 watch:
-  watchexec -e "cpp" -r "just run"
+  watchexec -e cpp,txt -r "just run"
