@@ -17,10 +17,11 @@
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            just
+            watchexec
             nixfmt-rfc-style
-            gcc
             clang-tools
+            just
+            gcc
           ];
         };
       });
