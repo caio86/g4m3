@@ -2,9 +2,9 @@
 using namespace std;
 
 void solve() {
-  int x;
-  cin >> x;
-  cout << pow(x, 2) << "\n";
+  int x; double y;
+  scanf("%d", &x);
+  printf("%.0f\n", pow(2, x));
 }
 
 int main() {
