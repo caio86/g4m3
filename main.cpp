@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve() {}
+void solve() {
+}
 
 int main() {
   cin.tie(0); cout.tie(0);
