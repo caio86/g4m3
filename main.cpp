@@ -1,8 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void solve() {
-}
+#ifdef  LOCAL
+#define D(x) cerr << #x << " = " << x << endl;
+#else
+#define D(x)
+#endif
+
+void solve() {}
 
 int main() {
   cin.tie(0); cout.tie(0);
