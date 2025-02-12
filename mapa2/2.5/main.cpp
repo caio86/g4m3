@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define all(x) (x).begin(), (x).end()
+
 void solve() {
   int atual = 0;
   int qtdMeloes = 0;
@@ -8,7 +10,7 @@ void solve() {
   while (true) {
     string foto; cin >> foto;
 
-    if (foto == "OOOOOOOOO")
+    if (all_of(all(foto), [](char chr){ return chr == 'O'; }))
       break;
 
     if (foto[atual] == 'X') {
