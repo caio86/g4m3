@@ -12,7 +12,7 @@ using namespace std;
 
 void solve() {
 	int x; cin >> x;
-	
+
 	if (x < 6) {
 		pn;
 		return;
@@ -20,9 +20,10 @@ void solve() {
 
 	for (int i = sqrt(x); i >= 2; i--) {
 		long long x1 = pow(i, 2);
+    if (x1+pow(i-1,2)*2 < x) break;
 		if (x - x1< 2) continue;
 
-		//cout << x << " - " << i << endl;
+		// cout << x << " - " << i << endl;
 
 		for (int j = i-1; j >= 1; j--) {
 			long long x2 = pow(j, 2);
@@ -41,7 +42,7 @@ int main() {
   ios::sync_with_stdio(0);
   int t; cin >> t;
   while (t--)
-  solve();
+    solve();
   return 0;
 }
 
