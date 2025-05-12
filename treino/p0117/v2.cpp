@@ -29,7 +29,6 @@ void solve() {
       string word; cin >> word;
       arr[i*m+j].word = word;
       arr[i*m+j].line = i+1;
-      // cerr << arr[i*m+j].word << " " << arr[i*m+j].line << endl;
     }
   }
 
@@ -37,18 +36,8 @@ void solve() {
     ll l = 0, r = n*m;
     ll m;
 
-    auto debug = [&](){
-      cerr
-        << "l=" << l << " "
-        << "r=" << r << " "
-        << "m=" << m << " "
-        << endl;
-    };
-
     while (r-l > 1) {
       m = (r+l) / 2;
-
-      // debug();
 
       if (arr[m].word == word)
         return arr[m].line;
@@ -59,7 +48,7 @@ void solve() {
         l = m;
     }
 
-    return arr[l].line;
+    return 0;
   };
 
   int q; cin >> q;
