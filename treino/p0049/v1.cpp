@@ -16,17 +16,19 @@ void solve() {
     for (int i = 0; i < n; i++)
       cin >> cidades[i];
 
-    int destino = cidades[0];
-
-    sort(cidades, cidades+n, [](int l, int r){return l > r;});
-
-    auto it = find(cidades, cidades+n, destino);
-
+    int maior = cidades[0];
+    int menor = cidades[0] -2;
     int res = 0;
-    for (auto i = ++it; i != cidades+n; i++) {
-      // a + 2 >= b
-      if (*i + 2 >= *(i-1)) {
+
+    sort(cidades+1, cidades+n, [](int l, int r) { return l > r; });
+
+    for (int i = 1; i < n; i++) {
+      if (cidades[i] > maior)
+        continue;
+
+      if (cidades[i] >= menor) {
         res++;
+        menor = min(menor, cidades[i]-2);
         continue;
       }
 
@@ -34,7 +36,6 @@ void solve() {
     }
 
     cout << res << endl;
-    // break;
   }
 }
 
