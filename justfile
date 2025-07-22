@@ -9,7 +9,8 @@ build src="main.cpp":
 [no-cd]
 _run input="input.txt":
   # Running with input: {{input}}
-  ./output <{{input}} | tee {{input}}_out
+  ./output <{{input}} > {{input}}_out
+  cat {{input}}_out
 
 [no-cd]
 run +inputs="input.txt": build
